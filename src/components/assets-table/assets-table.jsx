@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Button } from '../button/button';
+import url1 from './assets/eth.png';
 
 import './css/assets-table.css';
 
@@ -36,11 +37,7 @@ export const AssetsTable = ({
               <tr key={rowData.id}>
                 <td>
                   <span className="assets-table__image">
-                    <img
-                      src={'./assets/' + rowData.image}
-                      width="20"
-                      height="20"
-                    />
+                    <img src={url1} width="20" height="20" />
                   </span>
                   <span className="assets-table__name">{rowData.name}</span>
                   <span className="assets-table__short-name">

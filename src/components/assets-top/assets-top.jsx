@@ -1,4 +1,5 @@
 import React from 'react';
+import url1 from './assets/eth.png';
 
 import './css/assets-top.css';
 
@@ -25,11 +26,7 @@ export const AssetsTop = ({ data }) => {
           <tbody>
             <tr>
               <td className="assets-top__name">
-                <img
-                  src={'./assets/' + data.max.image}
-                  width="20"
-                  height="20"
-                />
+                <img src={url1} width="20" height="20" />
                 {data.max.name}
               </td>
               <td className="assets-top__change">
@@ -60,11 +57,7 @@ export const AssetsTop = ({ data }) => {
           <tbody>
             <tr>
               <td className="assets-top__name">
-                <img
-                  src={'./assets/' + data.min.image}
-                  width="20"
-                  height="20"
-                />
+                <img src={url1} width="20" height="20" />
                 {data.min.name}
               </td>
               <td className="assets-top__change">
