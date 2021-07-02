@@ -1,15 +1,19 @@
 .assets {
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .assets__widgets {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-@media (max-width: 800px) {
-	.assets {
-		flex-direction: column;
-	}
+@media screen and (max-width: 1279px) {
+  .assets {
+    flex-direction: column;
+  }
+  .assets__widgets {
+  }
 }

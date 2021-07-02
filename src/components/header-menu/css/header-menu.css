@@ -1,61 +1,71 @@
 .header-menu {
-	display: flex;
-	align-items: center;
-
+  display: flex;
+  align-items: center;
+  margin-left: 313px;
 }
 
-.header-menu > div {
-	display: none;
+.header-menu .overlay > div {
+  display: none;
 }
 
 .header-menu__burger {
-	display: none;
+  display: none;
 }
 
-@media (max-width: 800px) {
-	.header-menu .header-menu__list {
-		display: none;
-	}
-	.header-menu--opened .header-menu__list {
-		display: flex;
-		flex-direction: column;
+.header-menu__list {
+  display: flex;
+}
 
-	}
-	.header-menu--opened {
-		height: 100vh;
-	}
-	.header-menu--opened > div {
-		display: block;
-	}
-	.header-menu__burger {
-		position: relative;
-		display: block;
-		height: 2px;
-		width: 20px;
-	}
-	.header-menu__burger::after {
-		content: "";
-		position: absolute;
-		display: block;
-		height: 2px;
-		width: 20px;
-		top: -10px;
-	}	
-	.header-menu__burger::before {
-		content: "";
-		position: absolute;
-		display: block;
-		height: 2px;
-		width: 20px;
-		top: 10px;
-	}
-	.header-menu--opened .header-menu__burger {
-		display: none;
-	}
-	.header-menu--opened .header-menu__burger::after {
-		transform: rotateX(30deg);
-	}	
-	.header-menu--opened .header-menu__burger::before {
-		transform: rotateX(30deg);
-	}			
+@media screen and (max-width: 1279px) {
+  .header-menu .header-menu__list {
+    display: none;
+  }
+  .header-menu--opened .header-menu__list {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-menu--opened {
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-height: 100vh;
+    width: 100vw;
+    margin-left: 0;
+
+    background-color: rgba(17, 24, 39, 0.4);
+    overflow: hidden;
+    z-index: 10;
+  }
+  .header-menu--opened .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    height: 100vh;
+    width: 320px;
+    padding: 16px 20px;
+    border-radius: 16px 0px 0px 16px;
+    background-color: #fff;
+  }
+
+  .header-menu--opened .header-logo {
+    width: 260px;
+    height: 60px;
+  }
+  .header-menu--opened .overlay > div {
+    display: block;
+  }
+  .header-menu__burger {
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 20px;
+  }
+
+  .header-menu--opened .header-menu__burger {
+    top: 5px;
+  }
 }

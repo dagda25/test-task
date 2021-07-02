@@ -1,5 +1,43 @@
+.slider {
+  margin-bottom: 20px;
+}
+
 .slider > ul {
-	display: flex;
-	flex-wrap: nowrap;
-	overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.slider__item {
+  width: 416px;
+  margin-right: 16px;
+}
+
+.slider__item > img {
+  max-width: 416px;
+}
+
+@media screen and (max-width: 1279px) {
+  .slider {
+    overflow: hidden;
+    margin-bottom: 0px;
+  }
+  .slider > ul {
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 30vw;
+  }
+  .slider__item {
+    width: 47vw;
+    height: 30vw;
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+
+  .slider__item > img {
+    display: block;
+    max-width: 100%;
+    width: 47vw;
+    height: auto;
+  }
 }

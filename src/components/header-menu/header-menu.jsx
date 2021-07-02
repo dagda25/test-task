@@ -8,7 +8,15 @@ export const HeaderMenu = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpened((prev) => (prev ? false : true));
+    setIsMenuOpened((prev) => {
+      if (prev) {
+        document.body.style.overflow = 'auto';
+        return false;
+      } else {
+        document.body.style.overflow = 'hidden';
+        return true;
+      }
+    });
   };
 
   return (
@@ -17,13 +25,49 @@ export const HeaderMenu = () => {
         isMenuOpened ? 'header-menu header-menu--opened' : 'header-menu'
       }
     >
-      <HeaderLogo />
-      <button className="header-menu__burger" onClick={toggleMenu}></button>
-      <ul className="header-menu__list">
-        <HeaderMenuItem title="Market" active="false" />
-        <HeaderMenuItem title="Exchanges" active="false" />
-        <HeaderMenuItem title="Portfolio" active="true" />
-      </ul>
+      <div className="overlay">
+        <HeaderLogo />
+        <button className="header-menu__burger" onClick={toggleMenu}>
+          {isMenuOpened ? (
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1L13 13M1 13L13 1L1 13Z"
+                stroke="#9CA3AF"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          ) : (
+            <svg
+              width="18"
+              height="14"
+              viewBox="0 0 18 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 13H17M1 1H17H1ZM1 7H17H1Z"
+                stroke="#9CA3AF"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          )}
+        </button>
+        <ul className="header-menu__list">
+          <HeaderMenuItem title="Market" />
+          <HeaderMenuItem title="Exchanges" />
+          <HeaderMenuItem title="Portfolio" active />
+        </ul>
+      </div>
     </nav>
   );
 };

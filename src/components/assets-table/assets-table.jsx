@@ -9,7 +9,13 @@ export const AssetsTable = ({
   handleButtonClick,
   isAllAssetsShown,
 }) => {
-  console.log(isAllAssetsShown);
+  const getDataProfit = (profit) => {
+    if (profit >= 0) {
+      return `$${profit.toFixed(2).toLocaleString()}`;
+    } else {
+      return `-$${-profit.toFixed(2).toLocaleString()}`;
+    }
+  };
   return (
     <div className="assets-table-wrapper">
       <h2>Your Assets</h2>
@@ -28,12 +34,55 @@ export const AssetsTable = ({
           {tableData.map((rowData) => {
             return (
               <tr key={rowData.id}>
-                <td>{rowData.name}</td>
-                <td>{rowData.price}</td>
-                <td>{rowData.dayProfit}</td>
-                <td>{rowData.totalProfit}</td>
-                <td>{rowData.quantity}</td>
-                <td>{rowData.percent}</td>
+                <td>
+                  <span className="assets-table__image">
+                    <img
+                      src={'./assets/' + rowData.image}
+                      width="20"
+                      height="20"
+                    />
+                  </span>
+                  <span className="assets-table__name">{rowData.name}</span>
+                  <span className="assets-table__short-name">
+                    {rowData.shortName}
+                  </span>
+                </td>
+                <td>
+                  $
+                  {rowData.price.toLocaleString('en-GB', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  })}
+                  <br />
+                  <span className="assets-table__day-percent">2.82%</span>
+                </td>
+                <td className="assets-table__day-profit">
+                  {getDataProfit(rowData.dayProfit)}
+                </td>
+                <td>
+                  $
+                  {rowData.totalProfit.toLocaleString('en-GB', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  })}{' '}
+                  <br />
+                  <span className="assets-table__total-profit">12.75%</span>
+                </td>
+                <td>
+                  {rowData.quantity} {rowData.shortName}
+                  <br />
+                  <span className="assets-table__total-price">
+                    $
+                    {(rowData.quantity * rowData.price).toLocaleString(
+                      'en-GB',
+                      {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2,
+                      }
+                    )}
+                  </span>
+                </td>
+                <td className="assets-table__percent">{rowData.percent}%</td>
               </tr>
             );
           })}

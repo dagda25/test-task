@@ -1,0 +1,44 @@
+.main-footer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 24px;
+}
+
+.main-footer__about {
+  width: 440px;
+}
+
+.main-footer__logo > a {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-footer__logo > a > svg:first-child {
+  position: relative;
+  top: 0px;
+  margin-right: 6px;
+}
+
+.main-footer__logo > a > svg:nth-child(2) {
+  position: relative;
+  top: 5px;
+}
+
+.main-footer__info {
+  color: #9ca3af;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 1279px) {
+  .main-footer {
+    padding: 0 16px 40px;
+  }
+
+  .main-footer__about {
+    width: 27%;
+    margin-right: 16px;
+  }
+}

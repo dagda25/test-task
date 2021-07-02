@@ -1,0 +1,38 @@
+.footer-menu {
+  display: flex;
+  justify-content: left;
+  margin-left: 72px;
+}
+
+.footer-menu__services,
+.footer-menu__social,
+.footer-menu__legal {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  margin-right: 24px;
+}
+
+.footer-menu__legal {
+  margin-right: 0px;
+}
+
+.footer-menu__title {
+  color: #9ca3af;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 16px;
+  margin-top: 0px;
+}
+
+@media screen and (max-width: 1279px) {
+  .footer-menu {
+    width: 68%;
+    margin-left: 5px;
+  }
+  .footer-menu__services,
+  .footer-menu__social {
+    margin-right: 30px;
+  }
+}

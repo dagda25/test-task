@@ -6,6 +6,12 @@ export const AssetsTop = ({ data }) => {
   if (!data) {
     return <h3>loading...</h3>;
   }
+  const getProfit = (profit) => {
+    if (profit < 0) {
+      return `-$${-profit.toFixed(4)}`;
+    }
+    return `$${profit.toFixed(4)}`;
+  };
   return (
     <article className="assets-top">
       <div className="assets-top__gainer">
@@ -18,12 +24,27 @@ export const AssetsTop = ({ data }) => {
           </thead>
           <tbody>
             <tr>
-              <td>{data.max.name}</td>
-              <td>${data.max.dayProfit}</td>
+              <td className="assets-top__name">
+                <img
+                  src={'./assets/' + data.max.image}
+                  width="20"
+                  height="20"
+                />
+                {data.max.name}
+              </td>
+              <td className="assets-top__change">
+                {getProfit(data.max.dayProfit)}
+              </td>
             </tr>
             <tr>
-              <td>{data.max.shortName}</td>
-              <td>{(data.max.dayProfit / data.max.price) * 100}%</td>
+              <td className="assets-top__short-name">{data.max.shortName}</td>
+              <td className="assets-top__percent-change">
+                {(
+                  (data.max.dayProfit / (data.max.price * data.max.quantity)) *
+                  100
+                ).toFixed(2)}
+                %
+              </td>
             </tr>
           </tbody>
         </table>
@@ -38,12 +59,27 @@ export const AssetsTop = ({ data }) => {
           </thead>
           <tbody>
             <tr>
-              <td>{data.min.name}</td>
-              <td>${data.min.dayProfit}</td>
+              <td className="assets-top__name">
+                <img
+                  src={'./assets/' + data.min.image}
+                  width="20"
+                  height="20"
+                />
+                {data.min.name}
+              </td>
+              <td className="assets-top__change">
+                {getProfit(data.min.dayProfit)}
+              </td>
             </tr>
             <tr>
-              <td>{data.min.shortName}</td>
-              <td>{(data.min.dayProfit / data.min.price) * 100}%</td>
+              <td className="assets-top__short-name">{data.min.shortName}</td>
+              <td className="assets-top__percent-change">
+                {(
+                  (data.min.dayProfit / (data.min.price * data.min.quantity)) *
+                  100
+                ).toFixed(2)}
+                %
+              </td>
             </tr>
           </tbody>
         </table>

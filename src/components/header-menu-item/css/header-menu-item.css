@@ -1,7 +1,16 @@
 .header-menu-item {
-
+  margin-right: 32px;
+  font-size: 18px;
 }
 
 .header-menu-item--active {
-	
+  font-weight: 700;
+  color: #2563eb;
+}
+
+@media screen and (max-width: 1279px) {
+  .header-menu-item {
+    margin-left: 24px;
+    margin-bottom: 24px;
+  }
 }
