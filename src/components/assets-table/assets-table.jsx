@@ -20,31 +20,31 @@ export const AssetsTable = ({
   return (
     <div className="assets-table-wrapper">
       <h2>Your Assets</h2>
-      <table className="assets-table">
+      <table className="assets-table" role="table">
         <thead>
-          <tr>
-            <th>Asset</th>
-            <th>Price</th>
-            <th>24h Profit</th>
-            <th>All Time Profit</th>
-            <th>Quantity</th>
-            <th>%</th>
+          <tr role="row">
+            <th role="cell">Asset</th>
+            <th role="cell">Price</th>
+            <th role="cell">24h Profit</th>
+            <th role="cell">All Time Profit</th>
+            <th role="cell">Quantity</th>
+            <th role="cell">%</th>
           </tr>
         </thead>
         <tbody>
           {tableData.map((rowData) => {
             return (
-              <tr key={rowData.id}>
-                <td>
+              <tr key={rowData.id} role="row">
+                <td role="cell">
                   <span className="assets-table__image">
-                    <img src={url1} width="20" height="20" />
+                    <img src={url1} width="20" height="20" alt={rowData.name} />
                   </span>
                   <span className="assets-table__name">{rowData.name}</span>
                   <span className="assets-table__short-name">
                     {rowData.shortName}
                   </span>
                 </td>
-                <td>
+                <td role="cell">
                   $
                   {rowData.price.toLocaleString('en-GB', {
                     minimumFractionDigits: 2,
@@ -53,10 +53,10 @@ export const AssetsTable = ({
                   <br />
                   <span className="assets-table__day-percent">2.82%</span>
                 </td>
-                <td className="assets-table__day-profit">
+                <td className="assets-table__day-profit" role="cell">
                   {getDataProfit(rowData.dayProfit)}
                 </td>
-                <td>
+                <td role="cell">
                   $
                   {rowData.totalProfit.toLocaleString('en-GB', {
                     minimumFractionDigits: 2,
@@ -65,7 +65,7 @@ export const AssetsTable = ({
                   <br />
                   <span className="assets-table__total-profit">12.75%</span>
                 </td>
-                <td>
+                <td role="cell">
                   {rowData.quantity} {rowData.shortName}
                   <br />
                   <span className="assets-table__total-price">
@@ -79,7 +79,9 @@ export const AssetsTable = ({
                     )}
                   </span>
                 </td>
-                <td className="assets-table__percent">{rowData.percent}%</td>
+                <td className="assets-table__percent" role="cell">
+                  {rowData.percent}%
+                </td>
               </tr>
             );
           })}

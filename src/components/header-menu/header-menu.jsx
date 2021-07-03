@@ -27,7 +27,11 @@ export const HeaderMenu = () => {
     >
       <div className="overlay">
         <HeaderLogo />
-        <button className="header-menu__burger" onClick={toggleMenu}>
+        <button
+          className="header-menu__burger"
+          onClick={toggleMenu}
+          role="button"
+        >
           {isMenuOpened ? (
             <svg
               width="14"

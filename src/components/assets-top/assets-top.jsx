@@ -26,7 +26,7 @@ export const AssetsTop = ({ data }) => {
           <tbody>
             <tr>
               <td className="assets-top__name">
-                <img src={url1} width="20" height="20" />
+                <img src={url1} width="20" height="20" alt={data.max.name} />
                 {data.max.name}
               </td>
               <td className="assets-top__change">
@@ -57,7 +57,7 @@ export const AssetsTop = ({ data }) => {
           <tbody>
             <tr>
               <td className="assets-top__name">
-                <img src={url1} width="20" height="20" />
+                <img src={url1} width="20" height="20" alt={data.min.name} />
                 {data.min.name}
               </td>
               <td className="assets-top__change">
