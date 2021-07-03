@@ -9,9 +9,15 @@ export const AssetsTop = ({ data }) => {
   }
   const getProfit = (profit) => {
     if (profit < 0) {
-      return `-$${-profit.toFixed(4)}`;
+      return `-$${(-profit).toLocaleString('en-GB', {
+        minimumFractionDigits: 4,
+        maximumFractionDigits: 4,
+      })}`;
     }
-    return `$${profit.toFixed(4)}`;
+    return `$${profit.toLocaleString('en-GB', {
+      minimumFractionDigits: 4,
+      maximumFractionDigits: 4,
+    })}`;
   };
   return (
     <article className="assets-top">
