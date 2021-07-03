@@ -34,11 +34,21 @@
 
 @media screen and (max-width: 1279px) {
   .main-footer {
-    padding: 0 16px 40px;
+    padding: 0 0 40px;
   }
 
   .main-footer__about {
     width: 27%;
     margin-right: 16px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .main-footer {
+    flex-direction: column;
+  }
+  .main-footer__about {
+    order: 2;
+    width: 100%;
   }
 }

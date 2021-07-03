@@ -98,3 +98,18 @@
     margin-right: 16px;
   }
 }
+
+@media screen and (max-width: 639px) {
+  .assets-top {
+    margin-bottom: 22px;
+  }
+  .assets-top__gainer {
+    width: 100%;
+    margin-right: 0;
+    padding: 14px 0;
+    border-bottom: none;
+  }
+  .assets-top__loser {
+    display: none;
+  }
+}

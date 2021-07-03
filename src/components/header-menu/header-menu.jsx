@@ -67,6 +67,7 @@ export const HeaderMenu = () => {
           <HeaderMenuItem title="Exchanges" />
           <HeaderMenuItem title="Portfolio" active />
         </ul>
+        <p className="header-menu__about">© 2019 - 2021 DropsTab.</p>
       </div>
     </nav>
   );

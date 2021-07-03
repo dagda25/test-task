@@ -8,7 +8,8 @@
   display: none;
 }
 
-.header-menu__burger {
+.header-menu__burger,
+.header-menu__about {
   display: none;
 }
 
@@ -17,6 +18,9 @@
 }
 
 @media screen and (max-width: 1279px) {
+  .header-menu {
+    margin-left: 0;
+  }
   .header-menu .header-menu__list {
     display: none;
   }
@@ -67,5 +71,25 @@
 
   .header-menu--opened .header-menu__burger {
     top: 5px;
+  }
+
+  .header-menu--opened .header-menu__about {
+    display: block;
+    position: absolute;
+    bottom: 40px;
+    color: #9ca3af;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .header-menu {
+    margin-left: 0;
+  }
+
+  .header-menu--opened .overlay {
+    border-radius: 0px;
   }
 }

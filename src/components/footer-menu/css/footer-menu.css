@@ -36,3 +36,22 @@
     margin-right: 30px;
   }
 }
+
+@media screen and (max-width: 639px) {
+  .footer-menu {
+    width: 100%;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-bottom: 8px;
+  }
+  .footer-menu__services,
+  .footer-menu__social,
+  .footer-menu__legal {
+    width: 45%;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+  .footer-menu__services {
+    margin-right: 23px;
+  }
+}
