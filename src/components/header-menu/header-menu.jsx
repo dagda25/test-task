@@ -24,6 +24,7 @@ export const HeaderMenu = () => {
       className={
         isMenuOpened ? 'header-menu header-menu--opened' : 'header-menu'
       }
+      aria-label="Main navigation"
     >
       <div className="overlay">
         <HeaderLogo />

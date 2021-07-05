@@ -59,6 +59,7 @@ export const Assets = () => {
 
   return (
     <section className="assets">
+      <h1 className="assets__title">Portfolio</h1>
       <div className="assets__widgets">
         <AssetsSummary data={summaryData} />
         <AssetsTop data={topData} />

@@ -1,7 +1,7 @@
 .header-menu {
   display: flex;
   align-items: center;
-  margin-left: 313px;
+  margin: 0 auto;
 }
 
 .header-menu .overlay > div {
@@ -19,7 +19,8 @@
 
 @media screen and (max-width: 1279px) {
   .header-menu {
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: 0;
   }
   .header-menu .header-menu__list {
     display: none;
@@ -48,15 +49,16 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
+    justify-content: space-between;
     height: 100vh;
     width: 320px;
-    padding: 16px 20px;
+    padding: 12px 20px;
     border-radius: 16px 0px 0px 16px;
     background-color: #fff;
   }
 
   .header-menu--opened .header-logo {
-    width: 260px;
+    width: 184px;
     height: 60px;
   }
   .header-menu--opened .overlay > div {
@@ -85,10 +87,6 @@
 }
 
 @media screen and (max-width: 639px) {
-  .header-menu {
-    margin-left: 0;
-  }
-
   .header-menu--opened .overlay {
     border-radius: 0px;
   }

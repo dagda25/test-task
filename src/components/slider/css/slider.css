@@ -1,6 +1,13 @@
 .slider {
   margin-bottom: 20px;
 }
+.slider__title {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
 
 .slider > ul {
   display: flex;
@@ -10,7 +17,6 @@
 
 .slider__item {
   width: 416px;
-  margin-right: 16px;
 }
 
 .slider__item--tablet,
@@ -36,18 +42,13 @@
     width: 47vw;
     height: 32vw;
     margin-right: 0;
-    margin-bottom: 25px;
   }
 
   .slider__item--tablet {
     display: block;
   }
 
-  .slider__item--desktop {
-    display: none;
-  }
-
-  .slider__item > img {
+  .slider__item img {
     display: block;
     max-width: 100%;
     width: 47vw;
@@ -73,10 +74,9 @@
     width: 100%;
     height: 240px;
     margin-right: 0;
-    margin-bottom: 25px;
   }
 
-  .slider__item > img {
+  .slider__item img {
     width: 284px;
     margin: 0 auto;
   }

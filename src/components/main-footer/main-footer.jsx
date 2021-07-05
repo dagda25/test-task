@@ -7,6 +7,7 @@ export const MainFooter = () => {
   return (
     <footer className="main-footer">
       <section className="main-footer__about">
+        <h3 className="main-footer__title">About</h3>
         <div className="main-footer__logo">
           <a href="#">
             <svg
@@ -38,13 +39,13 @@ export const MainFooter = () => {
             </svg>
           </a>
         </div>
-        <div className="main-footer__info">
+        <p className="main-footer__info">
           DropsTab is an independent market cap website and is not affiliated
           with any project or company. There is no financial or investment
           advice. <br />
           <br />
           <br />© 2019 - 2021 DropsTab.
-        </div>
+        </p>
       </section>
 
       <FooterMenu />

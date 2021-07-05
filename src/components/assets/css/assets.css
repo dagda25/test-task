@@ -2,12 +2,19 @@
   display: flex;
   flex-direction: row;
   padding-bottom: 32px;
-  border-bottom: 1px solid #e5e7eb;
 }
 
 .assets__widgets {
   display: flex;
   flex-direction: column;
+}
+
+.assets__title {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 @media screen and (max-width: 1279px) {
@@ -18,6 +25,6 @@
 
 @media screen and (max-width: 639px) {
   .assets {
-    padding-bottom: 22px;
+    padding-bottom: 24px;
   }
 }

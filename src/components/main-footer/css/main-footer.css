@@ -1,7 +1,17 @@
 .main-footer {
   display: flex;
   flex-direction: row;
-  margin-top: 24px;
+  justify-content: space-between;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.main-footer__title {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 .main-footer__about {
@@ -34,12 +44,11 @@
 
 @media screen and (max-width: 1279px) {
   .main-footer {
-    padding: 0 0 40px;
+    padding: 24px 0 40px;
   }
 
   .main-footer__about {
-    width: 27%;
-    margin-right: 16px;
+    width: 27.5%;
   }
 }
 

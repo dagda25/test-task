@@ -1,7 +1,6 @@
 .footer-menu {
   display: flex;
   justify-content: left;
-  margin-left: 72px;
 }
 
 .footer-menu__services,
@@ -28,12 +27,18 @@
 
 @media screen and (max-width: 1279px) {
   .footer-menu {
-    width: 68%;
-    margin-left: 5px;
+    width: 70.3%;
+    justify-content: space-between;
   }
   .footer-menu__services,
   .footer-menu__social {
-    margin-right: 30px;
+    margin-right: 0px;
+  }
+
+  .footer-menu__services,
+  .footer-menu__social,
+  .footer-menu__legal {
+    width: 160px;
   }
 }
 
@@ -47,11 +52,8 @@
   .footer-menu__services,
   .footer-menu__social,
   .footer-menu__legal {
-    width: 45%;
+    width: 47%;
     margin-right: 0;
     margin-bottom: 8px;
-  }
-  .footer-menu__services {
-    margin-right: 23px;
   }
 }

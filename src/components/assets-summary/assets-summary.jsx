@@ -20,10 +20,10 @@ export const AssetsSummary = ({ data }) => {
     }
   };
   return (
-    <article className="assets-summary">
-      <div className="assets-summary__title">
+    <section className="assets-summary">
+      <h3 className="assets-summary__title">
         Shown Assets summary and Change
-      </div>
+      </h3>
       <div className="assets-summary__total">
         $
         {data.total.toLocaleString('en-GB', {
@@ -32,6 +32,6 @@ export const AssetsSummary = ({ data }) => {
         })}
       </div>
       <div className="assets-summary__change">{getDataProfit(data.profit)}</div>
-    </article>
+    </section>
   );
 };

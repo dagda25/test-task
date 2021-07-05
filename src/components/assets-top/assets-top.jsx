@@ -20,7 +20,8 @@ export const AssetsTop = ({ data }) => {
     })}`;
   };
   return (
-    <article className="assets-top">
+    <section className="assets-top">
+      <h3 className="assets-top__title"></h3>
       <div className="assets-top__gainer">
         <table>
           <thead>
@@ -83,6 +84,6 @@ export const AssetsTop = ({ data }) => {
           </tbody>
         </table>
       </div>
-    </article>
+    </section>
   );
 };

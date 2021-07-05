@@ -9,6 +9,7 @@ export const MainHeader = () => {
     <header className="main-header">
       <HeaderLogo />
       <HeaderMenu />
+      <div className="main-header__placeholder"></div>
     </header>
   );
 };

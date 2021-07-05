@@ -14,33 +14,28 @@ import './css/slider.css';
 export const Slider = () => {
   return (
     <section className="slider">
+      <h2 className="slider__title">Info</h2>
       <ul>
         <li className="slider__item slider__item--desktop">
-          <img src={'.' + img1} alt="slide" />
+          <picture>
+            <source media="(max-width: 639px)" srcSet={'.' + img1m} />
+            <source media="(max-width: 1279px)" srcSet={'.' + img1t} />
+            <img src={'.' + img1} alt="slide" />
+          </picture>
         </li>
         <li className="slider__item slider__item--desktop">
-          <img src={'.' + img2} alt="slide" />
+          <picture>
+            <source media="(max-width: 639px)" srcSet={'.' + img2m} />
+            <source media="(max-width: 1279px)" srcSet={'.' + img2t} />
+            <img src={'.' + img2} alt="slide" />
+          </picture>
         </li>
         <li className="slider__item slider__item--desktop">
-          <img src={'.' + img3} alt="slide" />
-        </li>
-        <li className="slider__item slider__item--tablet">
-          <img src={'.' + img1t} alt="slide" />
-        </li>
-        <li className="slider__item slider__item--tablet">
-          <img src={'.' + img2t} alt="slide" />
-        </li>
-        <li className="slider__item slider__item--tablet">
-          <img src={'.' + img3t} alt="slide" />
-        </li>
-        <li className="slider__item slider__item--mobile">
-          <img src={'.' + img1m} alt="slide" />
-        </li>
-        <li className="slider__item slider__item--mobile">
-          <img src={'.' + img2m} alt="slide" />
-        </li>
-        <li className="slider__item slider__item--mobile">
-          <img src={'.' + img3m} alt="slide" />
+          <picture>
+            <source media="(max-width: 639px)" srcSet={'.' + img3m} />
+            <source media="(max-width: 1279px)" srcSet={'.' + img3t} />
+            <img src={'.' + img3} alt="slide" />
+          </picture>
         </li>
       </ul>
     </section>

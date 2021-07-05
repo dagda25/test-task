@@ -5,7 +5,7 @@ import './css/footer-menu.css';
 
 export const FooterMenu = () => {
   return (
-    <nav className="footer-menu">
+    <nav className="footer-menu" aria-label="Footer navigation">
       <section className="footer-menu__services">
         <h3 className="footer-menu__title">Services</h3>
         <ul className="footer-menu__list">
